@@ -1,0 +1,162 @@
+/* Basic styling for Wordle */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2f2f2f;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS */
+.custom-alert {
+position: relative;
+  z-index: 1;
+  width: 300px;
+  height: 100px;
+  display: flex;
+
+  background-color: #d85a86;
+  background-image: radial-gradient( #fabce1, #dd7497, #ec4899);
+
+  box-shadow:  rgb(251, 244, 250) 1px 0 10px;
+
+  text-shadow:  rgb(251, 244, 250) 1px 0 10px;
+  border-radius: 1px;
+
+  color: #fff;
+  font-family: "cursive", cursive;
+  font-size: 3.2rem; 
+  font-weight: 200;
+  line-height: 2.75rem; 
+  padding: 10px;
+
+  justify-content: center;
+  align-items: flex-start;
+  font-style: italic;
+}
+
+
+.custom-alert button {
+    position: absolute;
+    bottom: 0; /* Align to the bottom of the container */
+    left: 43%; 
+    z-index: 1000;
+    background-color: transparent;   /* Button background is transparent */
+    color: #ffffff;                     /* Text color is white */
+    font-family: "cursive", cursive;  /* Matching the alert's font */
+    font-size: 2.2rem;                /* Smaller text */
+    font-weight: 300;                 /* Slightly lighter text weight */
+   line-height: 2.2rem;
+    border: none;                    /* Remove the default button border */
+    cursor: grab;                 /* Pointer cursor to indicate it's clickable */
+    padding: 7px ;                /* Padding for the button */
+    border-radius: 10px;               /* Rounded corners for the button */
+    margin-top: 0px;                 /* Some space between the button and the alert text */
+    transition: transform 0.7s ease-in-out, background-color 0.8s ease; /* Smooth animation on click */
+  }
+  
+  .custom-alert button:hover {
+    background-color: #edb7c5f5;       /* Button background color on hover */
+    transform: scale(0.7 );            /* Slightly enlarge the button on hover */
+  }
+  
+  .custom-alert button:active {
+    transform: scale(0.5);            /* Shrink button slightly when clicked */
+    background-color: #eb81b6;
+}
+  
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(5, 60px);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.floating-question {
+    width: 60px;
+    height: 60px;
+    background-color: pink;
+    border: 2px solid #bbb;
+    border-radius: 2;
+    color: rgb(70, 23, 27);
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+}
+
+.grid div {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #bbb;
+    background-color: #444;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.grid-cell {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #bbb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* Adjust for the number of keys */
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.key {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.key:active {
+    background-color: #ddd;
+}
+
+
+.keyboard button {
+    background-color: #333;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.keyboard button:hover {
+    background-color: #555;
+}
